@@ -1,1 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+
+/*Lato Regular and Bold*/
+@font-face {
+    font-family: 'Lato Regulrar';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato-Regular'), url('../fonts/Lato/Lato-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato-Bold'), url('../fonts/Lato/Lato-Bold.ttf') format('ttf');
+}
+
+/*Myriad*/
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('MYRIADPRO-REGULAR'), url('../fonts/MyriadPro/MYRIADPRO-REGULAR.woff') format('woff');
+}

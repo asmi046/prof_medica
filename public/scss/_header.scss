@@ -1,3 +1,32 @@
-header{
-    
+.header{
+    margin-bottom: 30px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0 0 0;
+    }
+
+
+}
+
+@media (max-width:1240px){
+    .header {
+        &__logo{
+            max-width: 240px;
+        }
+    }
+}
+
+
+@media (max-width: 860px){
+    .header{
+        &__wrapper{
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__logo{
+            max-width: 320px;
+        }
+    }
 }

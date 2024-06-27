@@ -1,3 +1,59 @@
+.menu {
+    display: flex;
+    gap: calc(55px - 15px);
+
+    &__items {
+
+        .item {
+            color: $text_color;
+            font-family: $btn_fonts;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: $btn_lineHeight-text;
+            padding: 8px 16px;
+            display: inline-block;
+
+            &-active{
+                color: $text_color-active;
+            }
+
+            &:hover {
+                color: $text_color-active;
+            }
+        }
+    }
+
+    &__mobile-button{
+        display: none;
+    }
+    &__call{
+        font-family: "Lato Bold";
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+
+
+@media (max-width:1240px){
+    .menu{
+        gap: 10px;
+
+        &__call{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width:990px){
+    .menu{
+        &__call{
+            display: none;
+        }
+    }
+
+}
+
+
 .side_menue_wrapper{
     position: fixed;
     width: 0;

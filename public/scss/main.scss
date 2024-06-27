@@ -7,14 +7,21 @@
 @import "standart";
 @import "form/all-form";
 @import "elements/all-elements";
+@import "header";
+@import "menues";
 
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+     text-rendering: optimizeLegibility;
+}
 
 body{
     font-family: $main_fonts;
     font-size: 16px;
+    color: $text_color;
 }
 
-header,
 footer,
 section{
     width: 100%;
@@ -26,6 +33,7 @@ section{
     width:100%;
     max-width: $conteiner_max_w;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 // Схема с сайдбаром
@@ -33,3 +41,38 @@ section{
 
 // Боковое беню
 // @import "menues";
+
+
+// Стили
+
+.title{
+    font-family: $main_title_fonts;
+
+}
+
+.main{
+    &__areas{
+        display: flex;
+    }
+    &__title{
+    font-size: 52px;
+    line-height: 52px;
+    margin: 0;
+    }
+
+    &__text{
+    font-family: $btn_fonts;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.4px;
+    max-width: 573px;
+    }
+}
+
+.main__areas__info{
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
