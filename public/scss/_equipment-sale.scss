@@ -1,0 +1,15 @@
+.sale-equipment__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.sale-equipment__card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.sale-equipment__info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

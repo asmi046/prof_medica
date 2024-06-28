@@ -311,6 +311,28 @@
     <section class="section section_sale-equipment">
         <div class="container">
             <h2 class="title">Продажа оборудования</h2>
+            <div class="sale-equipment__wrapper">
+                <div class="sale-equipment__card">
+                    <div class="sale-equipment__info">
+                        <h3 class="sale-equipment__title">
+                            Технические
+                            средства
+                            реабилитации
+                        </h3>
+                        <p class="sale-equipment_text">
+                            Инвалидные коляски,
+                            костыли, ходунки,
+                            трости, и т. д.
+                        </p>
+                        <a href="#" class="button button_ghost">Подробнее</a>
+                    </div>
+                    <div class="sale-equipment_img">
+                        <img src="{{ asset('/img/card-photo/tex_sredstva_reabilitation.png') }}"
+                            alt="Картинка к разделу: технические средства реабилитации">
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 @endsection

@@ -16,6 +16,7 @@ button,
     &:hover {
         background-color: $text_color-active;
     }
+
 }
 
 .button-white {
@@ -29,3 +30,10 @@ button,
         text-decoration: none;
     }
 }
+
+.button_ghost {
+    color: $main_btn_color;
+    border: 1px solid $main_btn_color;
+    background-color: #FAFAFA;
+}
+
