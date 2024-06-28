@@ -5,9 +5,18 @@
 }
 
 .card__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 0.5px solid $border_card_color;
     border-radius: $border_radius;
     width: 335px;
+    transition: box-shadow .3s ease-out, transform .3s ease-out;
+}
+
+.card__item:hover{
+    box-shadow: 7px 7px 5px 0px $shadow_hover_box;
+    transform: translate(0, -2%);
 }
 
 .card__item-img{
@@ -27,10 +36,31 @@
     padding: 24px 42px 28px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 20px;
 }
 
 .item__rent{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    padding: 2px;
+}
+
+.card__item_equipment{
+    font-family: $main_title_fonts;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+.item__rent{
+    font-family: $main_fonts;
+    &_time{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    &_price{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
 }

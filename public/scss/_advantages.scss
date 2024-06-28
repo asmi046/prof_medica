@@ -1,0 +1,29 @@
+
+.advantages__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.advantages__card{
+    width: 335px;
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 33px;
+    background: $advantages_bg_color;
+}
+
+.advantages__card_img{
+    height: 80px;
+}
+.advantages__card_text{
+    max-width: 200px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+}
