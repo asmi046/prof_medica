@@ -3,15 +3,26 @@ $hover_color: #273772;
 $sub_color: #5aa495;
 $black_color: #333;
 
+$gray_bg_color:#F5F5F5;
+$gray_border_color:#B4C5C5;
+
+$border_card_color: rgb(210, 209, 209);
+$border_radius: 20px;
+
+$main_btn_color:#003075;
+$primary_btn_color:#DA0010;
 /*Стили текста*/
 $text_color: #161615;
 $text_color-hover: #DA0010;
 $text_color-active: #129BDB;
 
+$text_font-size: 18px;
+
+$text_fs_subtitle: 34px;
+
 $btn_lineHeight-text: 22px;
 
-$gray_bg_color:#F5F5F5;
-$gray_border_color:#B4C5C5;
+
 
 $main_transition: all .5s ease;
 
@@ -20,7 +31,8 @@ $main_fonts:'Lato Regular', sans-serif;
 $main_title_fonts:'Lato Bold', sans-serif;
 $btn_fonts: 'Myriad Pro Regular', sans-serif;
 
-$border_rad: 10px;
+/*Кнопки*/
+$border_rad: 24px;
 
 $section_space: 30px;
 $conteiner_max_w: 1480px;

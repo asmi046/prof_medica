@@ -27,7 +27,7 @@
                 </nav>
                 <a href="tel:+79090000000" class="menu__call">+7 909 000 00 00</a>
 
-                <button class="menu__mobile-button" aria-expanded="false" aria-haspopup="true">
+                <button class="menu__mobile-button">
                     <img src="{{ asset('/img/icons/menu-icon.svg') }}" alt="Мобильное меню">
                 </button>
             </div>
@@ -46,14 +46,202 @@
                         реабелитации пациентов (кравати, каляски, кастыли и т. д.).
                         У нас гибкие условия и прогрессивная система скидок
                     </p>
-                    <a href="#">Перейти в каталог</a>
+                    <a class="button button__primary" href="#">Перейти в каталог</a>
                 </div>
                 <div class="main__areas__img-wrapper">
-                    <img src="{{ asset('/img/card-photo/arenda-image.png') }}"
+                    <img class="areas__img" src="{{ asset('/img/card-photo/arenda-image.png') }}"
                         alt="Картинка аренды медицинского оборудования">
                 </div>
             </div>
         </div>
     </main>
-
+    <section class="equipment_rent section">
+        <div class="container">
+            <h2 class="title">Оборудование в аренду</h2>
+            <div class="card__wrapper">
+                <div class="card__item">
+                    <div class="card__item-img">
+                        <img src="{{ asset('/img/card-items/hodynki_na_kolesax.png') }}"
+                            alt="Фото оборудования ходунков на колёсах производства R Wheel">
+                    </div>
+                    <div class="card__item-info">
+                        <div class="card__item_equipment">
+                            Ходунки на колесах R Wheel
+                        </div>
+                        <div class="card__item__rent">
+                            <div class="item__rent">
+                                <div class="item__rent_time">Сутки:</div>
+                                <div class="item__rent_price">300 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Неделя:</div>
+                                <div class="item__rent_price">1000 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Месяц:</div>
+                                <div class="item__rent_price">7000 руб</div>
+                            </div>
+                        </div>
+                        <button class="button">Взять в аренду</button>
+                    </div>
+                </div>
+                <div class="card__item">
+                    <div class="card__item-img">
+                        <img src="{{ asset('/img/card-items/kreslo-kalyaska-ArmedH002.png') }}"
+                            alt="Фото оборудования Кресло-коляска для инвалидов производства Armed H002">
+                    </div>
+                    <div class="card__item-info">
+                        <div class="card__item_equipment">
+                            Ходунки на колесах R Wheel
+                        </div>
+                        <div class="card__item__rent">
+                            <div class="item__rent">
+                                <div class="item__rent_time">Сутки:</div>
+                                <div class="item__rent_price">300 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Неделя:</div>
+                                <div class="item__rent_price">1000 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Месяц:</div>
+                                <div class="item__rent_price">7000 руб</div>
+                            </div>
+                        </div>
+                        <button class="button">Взять в аренду</button>
+                    </div>
+                </div>
+                <div class="card__item">
+                    <div class="card__item-img">
+                        <img src="{{ asset('/img/card-items/kostyli-armed-derevo.png') }}"
+                            alt="Фото оборудования Костыли производства Армед деревянные">
+                    </div>
+                    <div class="card__item-info">
+                        <div class="card__item_equipment">
+                            Ходунки на колесах R Wheel
+                        </div>
+                        <div class="card__item__rent">
+                            <div class="item__rent">
+                                <div class="item__rent_time">Сутки:</div>
+                                <div class="item__rent_price">300 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Неделя:</div>
+                                <div class="item__rent_price">1000 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Месяц:</div>
+                                <div class="item__rent_price">7000 руб</div>
+                            </div>
+                        </div>
+                        <button class="button">Взять в аренду</button>
+                    </div>
+                </div>
+                <div class="card__item">
+                    <div class="card__item-img">
+                        <img src="{{ asset('/img/card-items/tonometr-automatic-dlya-davlenya.png') }}"
+                            alt="Фото оборудования Тонометр автоматический для измерения давления">
+                    </div>
+                    <div class="card__item-info">
+                        <div class="card__item_equipment">
+                            Ходунки на колесах R Wheel
+                        </div>
+                        <div class="card__item__rent">
+                            <div class="item__rent">
+                                <div class="item__rent_time">Сутки:</div>
+                                <div class="item__rent_price">300 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Неделя:</div>
+                                <div class="item__rent_price">1000 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Месяц:</div>
+                                <div class="item__rent_price">7000 руб</div>
+                            </div>
+                        </div>
+                        <button class="button">Взять в аренду</button>
+                    </div>
+                </div>
+                <div class="card__item">
+                    <div class="card__item-img">
+                        <img src="{{ asset('/img/card-items/tonometr-automatic-dlya-davlenya.png') }}"
+                            alt="Фото оборудования Тонометр автоматический для измерения давления">
+                    </div>
+                    <div class="card__item-info">
+                        <div class="card__item_equipment">
+                            Ходунки на колесах R Wheel
+                        </div>
+                        <div class="card__item__rent">
+                            <div class="item__rent">
+                                <div class="item__rent_time">Сутки:</div>
+                                <div class="item__rent_price">300 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Неделя:</div>
+                                <div class="item__rent_price">1000 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Месяц:</div>
+                                <div class="item__rent_price">7000 руб</div>
+                            </div>
+                        </div>
+                        <button class="button">Взять в аренду</button>
+                    </div>
+                </div>
+                <div class="card__item">
+                    <div class="card__item-img">
+                        <img src="{{ asset('/img/card-items/tonometr-automatic-dlya-davlenya.png') }}"
+                            alt="Фото оборудования Тонометр автоматический для измерения давления">
+                    </div>
+                    <div class="card__item-info">
+                        <div class="card__item_equipment">
+                            Ходунки на колесах R Wheel
+                        </div>
+                        <div class="card__item__rent">
+                            <div class="item__rent">
+                                <div class="item__rent_time">Сутки:</div>
+                                <div class="item__rent_price">300 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Неделя:</div>
+                                <div class="item__rent_price">1000 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Месяц:</div>
+                                <div class="item__rent_price">7000 руб</div>
+                            </div>
+                        </div>
+                        <button class="button">Взять в аренду</button>
+                    </div>
+                </div>
+                <div class="card__item">
+                    <div class="card__item-img">
+                        <img src="{{ asset('/img/card-items/tonometr-automatic-dlya-davlenya.png') }}"
+                            alt="Фото оборудования Тонометр автоматический для измерения давления">
+                    </div>
+                    <div class="card__item-info">
+                        <div class="card__item_equipment">
+                            Ходунки на колесах R Wheel
+                        </div>
+                        <div class="card__item__rent">
+                            <div class="item__rent">
+                                <div class="item__rent_time">Сутки:</div>
+                                <div class="item__rent_price">300 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Неделя:</div>
+                                <div class="item__rent_price">1000 руб</div>
+                            </div>
+                            <div class="item__rent">
+                                <div class="item__rent_time">Месяц:</div>
+                                <div class="item__rent_price">7000 руб</div>
+                            </div>
+                        </div>
+                        <button class="button">Взять в аренду</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

@@ -1,0 +1,36 @@
+.card__wrapper{
+    display: flex;
+    gap: 33px;
+    flex-wrap: wrap;
+}
+
+.card__item{
+    border: 0.5px solid $border_card_color;
+    border-radius: $border_radius;
+    width: 335px;
+}
+
+.card__item-img{
+    padding: 12px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 290px;
+    background: rgb(242, 242, 242);
+    border-top-right-radius: $border_radius;
+    border-top-left-radius: $border_radius;
+}
+.card__item-img img{
+    width: 100%;
+}
+.card__item-info{
+    padding: 24px 42px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.item__rent{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}

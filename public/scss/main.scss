@@ -9,6 +9,7 @@
 @import "elements/all-elements";
 @import "header";
 @import "menues";
+@import "equipment_rent";
 
 html {
     -webkit-font-smoothing: antialiased;
@@ -47,17 +48,22 @@ section{
 
 .title{
     font-family: $main_title_fonts;
-
+    font-size: $text_fs_subtitle;
+    line-height: 41px;
+    margin: 0 0 18px 0;
 }
 
 .main{
     &__areas{
         display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
     }
     &__title{
     font-size: 52px;
     line-height: 52px;
     margin: 0;
+    max-width: 370px;
     }
 
     &__text{
@@ -67,6 +73,10 @@ section{
     line-height: 26.4px;
     max-width: 573px;
     }
+
+    &__areas__img-wrapper{
+        position: relative;
+    }
 }
 
 .main__areas__info{
@@ -75,4 +85,68 @@ section{
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+}
+
+
+
+.main__areas__img-wrapper::before{
+    position: absolute;
+    content: url("../img/card-photo/elips-small.svg");
+    max-width: 130px;
+    height: 130px;
+    right: -10px;
+    bottom: 11px;
+    box-shadow: -7px -5px 0 5px white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.areas__img{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width:1240px) {
+    .main__areas__img-wrapper::before{
+        display: none;
+    }
+}
+
+@media (max-width:990px) {
+    .main__title{
+        max-width: 640px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .main__text{
+        font-size: 18px;
+
+    }
+
+    .areas__img{
+        width: 100%;;
+    }
+}
+
+@media (max-width:860px) {
+    .main__areas{
+        display: block;
+    }
+    .main{
+        &__areas__info{
+            padding: 0;
+            align-items: center;
+        }
+        &__title{
+            text-align: center;
+        }
+        &__text{
+            text-align: center;
+        }
+    }
+    .main__areas__img-wrapper{
+        display: none;
+    }
+
 }

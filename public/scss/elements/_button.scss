@@ -1,18 +1,20 @@
 button,
 .button {
-    background-color: $main_color;
-    border: 1px solid $main_color;
-    color:white;
-    padding: 10px 30px;
-    cursor: pointer;
-    transition: $main_transition;
+    max-width: 250px;
     display: inline-block;
-    line-height: 1;
-    font-family: $main_fonts;
-    font-size: 16px;
+    padding: 14px 30px;
+    text-align: center;
+    font-family: $btn_fonts;
+    font-size: $text_font-size;
+    background-color: $main_btn_color;
+    color:white;
+    border-radius: $border_rad;
 
+    &__primary{
+        background-color: $primary_btn_color;
+    }
     &:hover {
-        background-color: $hover_color;
+        background-color: $text_color-active;
     }
 }
 
