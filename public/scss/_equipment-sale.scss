@@ -1,15 +1,42 @@
 .sale-equipment__wrapper{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.sale-equipment__card{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.sale-equipment__info{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.sale-equipment__card{
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border: 1px solid $equipment_sale_border_color;
+    border-radius: $border_radius;
+}
+.sale-equipment__info{
+    padding: 20px 36px;
+    max-width: 300px;
+}
+
+.equipment__info_top{
+    margin-bottom: 20px;
+}
+
+.sale-equipment__title{
+    font-family: $main_title_fonts;
+    font-size: $text_fs_h3;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0 0 8px 0;
+}
+
+.sale-equipment_text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text_color-active;
+}
+
+.sale-equipment__card img{
+    width: 350px;
+    height: 250px;
+    object-fit: none;
 }
