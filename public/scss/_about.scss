@@ -1,0 +1,12 @@
+.about__wrapper{
+padding: 55px 45px;
+background-color: $about_bg_color;
+border-radius: $border_radius;
+}
+
+.about__text{
+    line-height: 20px;
+    & p:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
