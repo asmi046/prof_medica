@@ -1,6 +1,8 @@
-.menu {
+.header__menu{
     display: flex;
     gap: calc(55px - 15px);
+}
+.menu {
 
     &__items {
 
