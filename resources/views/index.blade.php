@@ -312,87 +312,11 @@
         <div class="container">
             <h2 class="title">Продажа оборудования</h2>
             <div class="sale-equipment__wrapper">
-                <div class="sale-equipment__card">
-                    <div class="sale-equipment__info">
-                        <div class="equipment__info_top">
-                            <h3 class="sale-equipment__title">
-                                Технические
-                                средства
-                                реабилитации
-                            </h3>
-                            <p class="sale-equipment_text">
-                                Инвалидные коляски,
-                                костыли, ходунки,
-                                трости, и т. д.
-                            </p>
-                        </div>
-                        <a href="#" class="button button_ghost">Подробнее</a>
-                    </div>
 
-                    <img src="{{ asset('/img/card-photo/exp1.png') }}"
-                        alt="Картинка к разделу: технические средства реабилитации">
+                @for ($i=0; $i<4; $i++)
+                    <x-cards.sale-card></x-cards.sale-card>
+                @endfor
 
-                </div>
-                <div class="sale-equipment__card">
-                    <div class="sale-equipment__info">
-                        <div class="equipment__info_top">
-                            <h3 class="sale-equipment__title">
-                                Медицинская
-                                техника
-                            </h3>
-                            <p class="sale-equipment_text">
-                                Тонометры, термометры,
-                                ингаляторы, пульсоксиметры,
-                                кислородные концентраторы
-                            </p>
-                        </div>
-                        <a href="#" class="button button_ghost">Подробнее</a>
-                    </div>
-
-                    <img src="{{ asset('/img/card-photo/exp2.png') }}" alt="Картинка к разделу: Медицинская техника">
-
-                </div>
-                <div class="sale-equipment__card">
-                    <div class="sale-equipment__info">
-                        <div class="equipment__info_top">
-                            <h3 class="sale-equipment__title">
-                                Косметология и
-                                гигиена полости
-                                рта
-                            </h3>
-                            <p class="sale-equipment_text">
-                                Ультразвуковые чистки лица,
-                                антивозрастные процедуры,
-                                ирригаторы
-                            </p>
-                        </div>
-                        <a href="#" class="button button_ghost">Подробнее</a>
-                    </div>
-
-                    <img src="{{ asset('/img/card-photo/exp3.png') }}"
-                        alt="Картинка к разделу: Косметология и гигиена полости рта">
-
-                </div>
-                <div class="sale-equipment__card">
-                    <div class="sale-equipment__info">
-                        <div class="equipment__info_top">
-                            <h3 class="sale-equipment__title">
-                                Микроклимат
-                                в помещении
-                            </h3>
-                            <p class="sale-equipment_text">
-                                Очистители воздуха,
-                                ионизаторы, бактерицидные
-                                облучатели, соляные лампы
-                            </p>
-                        </div>
-                        <a href="#" class="button button_ghost">Подробнее</a>
-                    </div>
-
-                    <img src="{{ asset('/img/card-photo/exp4.png') }}"
-                        alt="Картинка к разделу:  Микроклимат в помещении">
-
-                </div>
             </div>
         </div>
     </section>
