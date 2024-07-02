@@ -11,7 +11,7 @@
     border: 0.5px solid $border_card_color;
     border-radius: $border_radius;
     width: 335px;
-    transition: box-shadow .3s ease-out, transform .3s ease-out;
+    transition: box-shadow .3s ease-out;
 }
 
 .card__item:hover{
