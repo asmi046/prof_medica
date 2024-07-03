@@ -7,7 +7,6 @@
 .card__item{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border: 0.5px solid $border_card_color;
     border-radius: $border_radius;
     width: 335px;
@@ -45,7 +44,7 @@
 }
 
 .card__item_equipment{
-    font-family: $main_title_fonts;
+    font-family: $main_fonts;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
@@ -62,4 +61,43 @@
         font-weight: 400;
         line-height: 19px;
     }
+}
+
+@media (max-width: 1240px) {
+    .card__wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 20px;
+        justify-items: center;
+
+        .card__item{
+            width: 320px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .card__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+
+
+    .card__item {
+        width: 90%;
+
+        &-img {
+        height: auto;
+    }
+
+        &-info {
+        margin: 0 auto;
+    }
+    .item__rent{
+        grid-template-columns: repeat(2, 1fr);
+    }
+        }
+
+    }
+
+
 }

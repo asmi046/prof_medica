@@ -2,6 +2,8 @@
     display: flex;
     gap: calc(55px - 15px);
 }
+
+
 .menu {
 
     &__items {
@@ -32,18 +34,35 @@
         font-family: "Lato";
         font-size: 28px;
         line-height: 34px;
+        font-weight: 700;
     }
 }
 
-
-@media (max-width:1240px){
-    .menu{
-        gap: 10px;
-
-        &__call{
-            font-size: 20px;
-        }
+@media (max-width: 1240px){
+    .menu__call{
+        font-size: 22px;
     }
+}
+
+@media (max-width:1024px) {
+    .logo {
+        max-width: 240px;
+    }
+
+          .menu {
+              gap: 10px;
+
+              &__call {
+                  font-size: 18px;
+              }
+
+              &__items{
+
+                .item{
+                    font-size: 16px;
+                }
+              }
+          }
 }
 
 @media (max-width:990px){

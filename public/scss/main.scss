@@ -51,9 +51,10 @@ section{
 // Стили
 
 .title{
-    font-family: $main_title_fonts;
+    font-family: $main_fonts;
     font-size: $text_fs_h2;
     line-height: 41px;
+    font-weight: 700;
     margin: 0 0 20px 0;
 }
 
@@ -112,8 +113,16 @@ section{
 }
 
 @media (max-width:1240px) {
-    .main__areas__img-wrapper::before{
-        display: none;
+    .main{
+        &__title{
+            font-size: 34px;
+        }
+        &__text {
+            font-size: 18px;
+        }
+        &__areas__img-wrapper::before {
+                display: none;
+            }
     }
 }
 

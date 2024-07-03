@@ -14,7 +14,7 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <a href="#"><img class="header__logo" src="{{ asset('/img/icons/logo-icon.svg') }}"
+                <a href="#"><img class="header__logo logo" src="{{ asset('/img/icons/logo-icon.svg') }}"
                         alt="Логотип Профмедика"></a>
                 <nav>
                     <ul class="header__menu menu">
@@ -59,7 +59,7 @@
         <div class="container">
             <h2 class="title">Оборудование в аренду</h2>
             <div class="card__wrapper">
-                @for ($i=0; $i<8; $i++)
+                @for ($i = 0; $i < 8; $i++)
                     <x-cards.rent-card></x-cards.rent-card>
                 @endfor
             </div>
@@ -134,7 +134,7 @@
             <h2 class="title">Продажа оборудования</h2>
             <div class="sale-equipment__wrapper">
 
-                @for ($i=0; $i<4; $i++)
+                @for ($i = 0; $i < 4; $i++)
                     <x-cards.sale-card></x-cards.sale-card>
                 @endfor
 
@@ -169,10 +169,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <a href="#"><img class="footer__logo" src="{{ asset('/img/icons/logo-icon.svg') }}"
+                <a href="#"><img class="footer__logo logo" src="{{ asset('/img/icons/logo-icon.svg') }}"
                         alt="Логотип Профмедика"></a>
                 <nav>
-                    <ul class="footer__menu menu">
+                    <ul class="footer__menu menu_nospace menu">
                         <li class="menu__items"><a class="item" href="#">Оборудование в аренду</a></li>
                         <li class="menu__items"><a class="item" href="#">Купить оборудование</a>
                         </li>
