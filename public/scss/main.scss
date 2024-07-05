@@ -26,7 +26,6 @@ body{
     color: $text_color;
 }
 
-footer,
 section{
     width: 100%;
     padding-top: $section_space;
@@ -143,6 +142,9 @@ section{
 }
 
 @media (max-width:860px) {
+    .title{
+        font-size: 24px;
+    }
     .main__areas{
         display: block;
     }
@@ -152,6 +154,7 @@ section{
             align-items: center;
         }
         &__title{
+            font-size: 28px;
             text-align: center;
         }
         &__text{
@@ -161,5 +164,21 @@ section{
     .main__areas__img-wrapper{
         display: none;
     }
+}
 
+@media (max-width: 640px){
+    .container {
+        padding: 0 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .main__areas__info{
+        gap: 15px;
+
+        .main__text {
+            font-size: 16px;
+        }
+    }
 }

@@ -98,6 +98,19 @@
         }
 
     }
+}
 
+@media (max-width: 640px){
+    .card__wrapper{
+        column-gap: 0;
+        .card__item-info{
+            padding: 10px;
+        }
+    }
+}
 
+@media (max-width: 480px) {
+    .card__wrapper {
+        grid-template-columns: 1fr;
+    }
 }

@@ -88,3 +88,9 @@
         }
     }
 }
+
+@media (max-width: 480px){
+        .sale-equipment__wrapper{
+            grid-template-columns: 1fr;;
+        }
+}

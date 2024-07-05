@@ -38,5 +38,11 @@
             width: 100%;
         }
     }
+}
 
+
+@media (max-width: 480px) {
+        .advantages__wrapper{
+            grid-template-columns: 1fr;
+        }
 }
