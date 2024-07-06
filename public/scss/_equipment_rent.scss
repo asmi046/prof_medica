@@ -63,6 +63,13 @@
     }
 }
 
+/*Для карточки товара в аренду*/
+.equipment{
+    &__titel_panel {
+        background-image: ulr("{{ asset('/img/card-photo/arenda-image.png') }}");
+    }
+}
+
 @media (max-width: 1240px) {
     .card__wrapper{
         display: grid;

@@ -34,6 +34,7 @@
             </div>
         </div>
     </main>
+
     <section class="equipment_rent section">
         <div class="container">
             <h2 class="title">Оборудование в аренду</h2>

@@ -43,11 +43,19 @@ section{
 // Схема с сайдбаром
 // @import "sidebar-schem";
 
+
+// Стили хлебных крошек
+.breadcrumbs_section{
+    padding: 0;
+}
+
 // Боковое беню
 // @import "menues";
 
 
 // Стили
+
+
 
 .title{
     font-family: $main_fonts;
@@ -57,6 +65,13 @@ section{
     margin: 0 0 20px 0;
 }
 
+/*Заголовок карточки товара в аренду*/
+.titel_panel{
+    font-size: 52px;
+    line-height: 52px;
+    margin: 0;
+    max-width: 715px;
+}
 .main{
     &__areas{
         display: flex;
@@ -110,6 +125,8 @@ section{
     position: relative;
     z-index: 1;
 }
+
+/*Мобильная верстка*/
 
 @media (max-width:1240px) {
     .main{
