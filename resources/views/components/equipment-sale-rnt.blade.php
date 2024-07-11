@@ -2,7 +2,7 @@
         <div class="container">
             <div class="card__wrapper">
                 @for ($i = 0; $i < 8; $i++)
-                    <x-cards.rent-card></x-cards.rent-card>
+                    <x-cards.sale-card-rnt></x-cards.sale-card-rnt>
                 @endfor
             </div>
         </div>

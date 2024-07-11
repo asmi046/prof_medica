@@ -115,7 +115,7 @@
             <div class="sale-equipment__wrapper">
 
                 @for ($i = 0; $i < 4; $i++)
-                    <x-cards.sale-card></x-cards.sale-card>
+                    <x-cards.sale-eqiupment></x-cards.sale-eqiupment>
                 @endfor
 
             </div>

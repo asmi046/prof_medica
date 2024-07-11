@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 }
 
-.card__item{
+.card__item {
     display: flex;
     flex-direction: column;
     border: 0.5px solid $border_card_color;
@@ -13,11 +13,11 @@
     transition: box-shadow .3s ease-out;
 }
 
-.card__item:hover{
+.card__item:hover {
     box-shadow: 7px 7px 5px 0px $shadow_hover_box;
 }
 
-.card__item-img{
+.card__item-img {
     padding: 12px 32px;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
     border-top-right-radius: $border_radius;
     border-top-left-radius: $border_radius;
 }
-.card__item-img img{
+.card__item-img img {
     width: 100%;
 }
 .card__item-info{
@@ -37,11 +37,6 @@
     gap: 20px;
 }
 
-.item__rent{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 2px;
-}
 
 .card__item_equipment{
     font-family: $main_fonts;
@@ -50,18 +45,31 @@
     font-weight: 700;
 }
 .item__rent{
-    font-family: $main_fonts;
-    &_time{
+        font-family: $main_fonts;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2px;
+        &:has(.price-card) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+    &_time {
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
     }
-    &_price{
+    &_price {
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
+
+        .price-card {
+            font-size: 22px;
+            font-weight: 700;
+        }
     }
 }
+
 
 /*Для карточки товара в аренду*/
 .equipment{
