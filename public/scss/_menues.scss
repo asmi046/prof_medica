@@ -25,9 +25,7 @@ flex-grow: 1;
                     }
                 }
             }
-            &_sub{
-                max-width: 390px;
-            }
+
                 &__call {
                     font-family: $main_fonts;
                     font-size: 28px;
@@ -60,13 +58,11 @@ align-items: center;
 
 
 
-@media (max-width: 1240px) {
+@media (max-width: 1280px) {
     .navigation{
         .menu{
             gap: 0;
-            &_sub{
-                max-width: 270px;
-            }
+
             &__call{
                 font-size: 20px;
             }

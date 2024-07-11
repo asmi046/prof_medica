@@ -3,7 +3,11 @@ a:has(.logo) {
 }
 
 .header{
+    position: sticky;
     margin-bottom: 30px;
+    top: 0;
+    z-index: 20;
+    background-color: white;
 
     &__wrapper {
         display: flex;
@@ -11,7 +15,7 @@ a:has(.logo) {
         align-items: center;
         justify-content: space-between;
         padding: $space_20 0;
-        background-color: #e7eeeee3;
+
     }
 
         .header__menu {
