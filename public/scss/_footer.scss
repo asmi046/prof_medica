@@ -1,5 +1,6 @@
 .footer__wrapper{
     display: flex;
+    gap: $space_20;
     justify-content: space-between;
     padding: $section_space 0;
     border-top: 2px solid $about_bg_color;

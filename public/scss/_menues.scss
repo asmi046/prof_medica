@@ -1,77 +1,112 @@
-.header__menu{
-    display: flex;
-    gap: calc(55px - 15px);
+/*Общая навигация для меню*/
+.navigation{
+display: flex;
+justify-content: space-between;
+flex-grow: 1;
+    .menu{
+        gap: $space_20;
+        &__items {
+
+                .item {
+                    color: $text_color;
+                    font-family: $btn_fonts;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: $btn_lineHeight-text;
+                    padding: 8px 16px;
+                    display: inline-block;
+
+                    &-active {
+                        color: $text_color-active;
+                    }
+
+                    &:hover {
+                        color: $text_color-active;
+                    }
+                }
+            }
+            &_sub{
+                max-width: 390px;
+            }
+                &__call {
+                    font-family: $main_fonts;
+                    font-size: 28px;
+                    line-height: 34px;
+                    font-weight: 700;
+                    text-align: right;
+                    white-space: nowrap;
+                }
+
+        &__mobile-button {
+                display: none;
+            }
+    }
+
+}
+.header__navigation {
+align-items: center;
+    .menu {
+        &_main{
+            display: flex;
+            justify-content: space-around;
+        }
+        &_sub{
+            display: none;
+        }
+
+    }
+
 }
 
 
-.menu {
 
-    &__items {
-
-        .item {
-            color: $text_color;
-            font-family: $btn_fonts;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: $btn_lineHeight-text;
-            padding: 8px 16px;
-            display: inline-block;
-
-            &-active{
-                color: $text_color-active;
+@media (max-width: 1240px) {
+    .navigation{
+        .menu{
+            gap: 0;
+            &_sub{
+                max-width: 270px;
             }
-
-            &:hover {
-                color: $text_color-active;
+            &__call{
+                font-size: 20px;
             }
         }
-    }
-
-    &__mobile-button{
-        display: none;
-    }
-    &__call{
-        font-family: "Lato";
-        font-size: 28px;
-        line-height: 34px;
-        font-weight: 700;
-    }
-}
-
-@media (max-width: 1240px){
-    .menu__call{
-        font-size: 22px;
     }
 }
 
 @media (max-width:1024px) {
-    .logo {
-        max-width: 240px;
+.navigation{
+    .menu{
+        &__items {
+            .item {
+                font-size: 16px;
+                 }
+         }
+        }
     }
-
-          .menu {
-              gap: 10px;
-
-              &__call {
-                  font-size: 18px;
-              }
-
-              &__items{
-
-                .item{
-                    font-size: 16px;
-                }
-              }
-          }
 }
 
-@media (max-width:990px){
-    .menu__call{
+@media (max-width:990px) {
+    .menu__call {
             display: none;
-    }
-
+        }
 }
 
+@media (max-width: 768px) {
+    .header__navigation{
+        justify-content: flex-end;
+        .menu{
+            display: none;
+        }
+        .menu__mobile-button{
+            display: block;
+        }
+    }
+
+    .footer__navigation{
+        flex-direction: column;
+    }
+}
 
 
 .side_menue_wrapper{

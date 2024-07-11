@@ -1,22 +1,36 @@
+a:has(.logo) {
+    flex-grow: 1;
+}
+
 .header{
     margin-bottom: 30px;
 
     &__wrapper {
         display: flex;
+        gap: $space_20;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 20px;
+        padding: $space_20 0;
         background-color: #e7eeeee3;
     }
 
+        .header__menu {
+            display: flex;
+            gap: calc(55px - 15px);
+        }
+}
 
+@media (max-width: 1240px) {
+    .logo{
+        max-width: 270px;
+    }
 }
 
 @media (max-width: 860px){
     .header{
         &__wrapper{
             flex-direction: column;
-            gap: 20px;
+            gap: $space_20;
         }
         &__logo{
             max-width: 320px;
@@ -29,14 +43,17 @@
         &__wrapper{
             flex-direction: row;
             align-items: center;
-            .header__menu{
-                display: none;
-            }
         }
-        .menu {
-            &__mobile-button{
-                display: inline-block;
-            }
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__logo {
+            max-width: 250px;
         }
     }
 }
