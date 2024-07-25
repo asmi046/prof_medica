@@ -104,6 +104,19 @@ align-items: center;
     }
 }
 
+@media (max-width: 480px) {
+    .menu__mobile-button{
+        padding: 10px 20px;
+    }
+
+    .footer__navigation {
+        text-align: center;
+    }
+}
+
+
+
+
 
 .side_menue_wrapper{
     position: fixed;

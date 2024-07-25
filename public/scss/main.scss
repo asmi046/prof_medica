@@ -152,9 +152,6 @@ section{
 
     }
 
-    .areas__img{
-        width: 100%;;
-    }
 }
 
 @media (max-width:860px) {
@@ -162,7 +159,7 @@ section{
         font-size: 24px;
     }
     .main__areas{
-        display: block;
+        flex-direction: column-reverse;
     }
     .main{
         &__areas__info{
@@ -176,9 +173,16 @@ section{
         &__text{
             text-align: center;
         }
-    }
-    .main__areas__img-wrapper{
-        display: none;
+        &__areas__img-wrapper{
+            display: flex;
+            justify-content: center;
+        .areas__img {
+            width: 60%;
+            min-width: 40%;
+
+            }
+        }
+
     }
 }
 

@@ -53,11 +53,9 @@ a:has(.logo) {
 
 @media (max-width: 480px) {
     .header {
-        &__wrapper {
-            flex-direction: column;
-        }
+
         &__logo {
-            max-width: 250px;
+            width: 100%;;
         }
     }
 }
