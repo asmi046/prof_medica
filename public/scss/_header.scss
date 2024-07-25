@@ -9,6 +9,10 @@ a:has(.logo) {
     z-index: 20;
     background-color: white;
 
+    &.sclolled {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    }
+
     &__wrapper {
         display: flex;
         gap: $space_20;

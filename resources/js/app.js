@@ -1,11 +1,10 @@
 import './bootstrap';
 
-const headerBorder = document.querySelector('.container__header')
+const headerBorder = document.querySelector('header.header')
 window.addEventListener('scroll', function(e){
-    const scrollInfo = document.documentElement.scrollTop;
-    if(scrollInfo>10){
-        headerBorder.style.borderBottom = '2px solid black';
+    if(document.documentElement.scrollTop > 10){
+        headerBorder.classList.add('sclolled')
     }  else {
-        headerBorder.style.borderBottom = '';
+        headerBorder.classList.remove('sclolled')
     }
 });

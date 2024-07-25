@@ -13,6 +13,6 @@
     </li>
 </ul>
 <a href="tel:+79090000000" class="menu__call">+7 909 000 00 00</a>
-<button class="menu__mobile-button">
+<a href="#" class="menu__mobile-button">
     <img src="{{ asset('/img/icons/menu-icon.svg') }}" alt="Мобильное меню">
-</button>
+</a>
