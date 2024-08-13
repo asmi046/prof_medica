@@ -1,5 +1,23 @@
 <?php
 
+// Вычисление цены аренды
+
+if (!function_exists("get_rent_price")) {
+    function get_rent_price($base_price, $sales, $dey_count) {
+        $summ = 0;
+
+        for ($i = 0; $i<$dey_count; $i++) {
+            if ( isset($sales[$i]) ) {
+                $summ += ($sales[$i]['sale'] != 0)?(($base_price / 100) * (int) $sales[$i]['sale']):$base_price;
+            } else {
+                $summ += ($base_price / 100) * (int) $sales[count($dey_count)-1]['sale'];
+            }
+        }
+
+        return round($summ);
+    }
+}
+
 // Месяц текстом
 if (!function_exists("get_month")) {
     function get_month($date) {
