@@ -107,17 +107,17 @@ section{
 
 
 
-.main__areas__img-wrapper::before{
-    position: absolute;
-    content: url("../img/card-photo/elips-small.svg");
-    max-width: 130px;
-    height: 130px;
-    right: -10px;
-    bottom: 11px;
-    box-shadow: -7px -5px 0 5px white;
-    border-radius: 50%;
-    z-index: 2;
-}
+// .main__areas__img-wrapper::before{
+//     position: absolute;
+//     content: url("../img/card-photo/elips-small.svg");
+//     max-width: 130px;
+//     height: 130px;
+//     right: -10px;
+//     bottom: 11px;
+//     box-shadow: -7px -5px 0 5px white;
+//     border-radius: 50%;
+//     z-index: 2;
+// }
 
 .areas__img{
     width: 100%;

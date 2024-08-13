@@ -17,6 +17,9 @@ class Product extends Model
         "description",
         "short_description",
 
+        "price",
+        "old_price",
+
         "viev_count",
 
         "hit",
