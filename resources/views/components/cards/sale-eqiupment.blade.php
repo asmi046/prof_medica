@@ -8,7 +8,7 @@
                 {{ $item->title_comment }}
             </p>
         </div>
-        <a href="#" class="button button_ghost">Подробнее</a>
+        <a href="{{ route('category', $item->slug) }}" class="button button_ghost">Подробнее</a>
     </div>
 
     <div class="sale-equipment__img">

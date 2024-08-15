@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
-            <a href="#"><img class="footer__logo logo" src="{{ asset('/img/icons/logo-icon.svg') }}" alt="ПрофМедика"></a>
+            <a href="{{ route('home') }}"><img class="footer__logo logo" src="{{ asset('/img/logo.svg') }}" alt="ПрофМедика"></a>
 
             <nav class="footer__navigation navigation">
                 <ul class="menu menu_main">

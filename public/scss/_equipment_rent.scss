@@ -20,7 +20,6 @@
 }
 
 .card__item-img {
-    padding: 12px 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,15 +27,22 @@
     background: rgb(242, 242, 242);
     border-top-right-radius: $border_radius;
     border-top-left-radius: $border_radius;
-}
-.card__item-img img {
-    width: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
 }
 .card__item-info{
     padding: 24px 28px 28px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 1;
+
 }
 
 
@@ -60,11 +66,12 @@
         font-weight: 400;
         line-height: 19px;
     }
+
     &_price {
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
-
+        margin: auto 0 0 0;
         .price-card {
             font-size: 22px;
             font-weight: 700;
@@ -76,7 +83,10 @@
 /*Для карточки товара в аренду*/
 .equipment{
     &__titel_panel {
-        background-image: ulr("{{ asset('/img/card-photo/arenda-image.png') }}");
+        padding:30px 40px;
+        border-radius: $border_radius;
+        background-image: url("../img/page_head_3.webp");
+        background-size: cover;
     }
 }
 

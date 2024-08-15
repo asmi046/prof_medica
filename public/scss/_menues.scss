@@ -13,7 +13,7 @@ flex-grow: 1;
                     font-size: 18px;
                     font-weight: 400;
                     line-height: $btn_lineHeight-text;
-                    padding: 8px 16px;
+                    padding: 0 16px 8px 16px;
                     display: inline-block;
 
                     &-active {
@@ -33,6 +33,7 @@ flex-grow: 1;
                     font-weight: 700;
                     text-align: right;
                     white-space: nowrap;
+                    margin-left: 20px;
                 }
 
         &__mobile-button {
@@ -41,6 +42,7 @@ flex-grow: 1;
     }
 
 }
+
 .header__navigation {
 align-items: center;
     .menu {

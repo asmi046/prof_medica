@@ -17,33 +17,33 @@ class MenuSeeder extends Seeder
             [
                 [
                     'menue_id' => "Главное меню",
-                    'lnk' => "#",
+                    'lnk' => "/rent_catalog",
                     'order' => 1,
                     'title' => "Оборудование в аренду",
                 ],
                 [
                     'menue_id' => "Главное меню",
-                    'lnk' => "#",
+                    'lnk' => "/catalog_for_bay",
                     'order' => 2,
                     'title' => "Купить оборудование",
                 ],
                 [
                     'menue_id' => "Главное меню",
-                    'lnk' => "#",
+                    'lnk' => "/contacts",
                     'order' => 3,
                     'title' => "Контакты",
                 ],
 
                 [
                     'menue_id' => "Дополнительная информация",
-                    'lnk' => "#",
+                    'lnk' => "/page/politika-konfidencialnosti",
                     'order' => 1,
                     'title' => "Политика в области обаботки персональных данных",
                 ],
 
                 [
                     'menue_id' => "Дополнительная информация",
-                    'lnk' => "#",
+                    'lnk' => "/page/soglasie-na-obrabotku-personalnyx-dannyx",
                     'order' => 2,
                     'title' => "Согласие на обработку персональных данных",
                 ],

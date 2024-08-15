@@ -1,10 +1,5 @@
 @extends('layouts.all')
 
-@php
-    $title = 'Медицинское оборудование на продажу';
-    $description = '';
-@endphp
-
 @section('title', $title)
 @section('description', $description)
 
@@ -25,5 +20,16 @@
 
     <x-category-selector></x-category-selector>
 
-    <x-equipment-sale-rnt></x-equipment-sale-rnt>
+    <section class="equipment_rent section">
+        <div class="container">
+            <div class="card__wrapper">
+                @foreach ($products as $item)
+                    <x-cards.sale-card-rnt :item="$item"></x-cards.sale-card-rnt>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <x-pagination :tovars="$products"></x-pagination>
+
 @endsection

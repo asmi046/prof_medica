@@ -1,8 +1,8 @@
 @extends('layouts.all')
 
 @php
-    $title = 'Медицинское оборудование на продажу';
-    $description = '';
+    $title = (empty($page->seo_title))?$page->title:$page->seo_title;
+    $description = (empty($page->seo_description))?$page->title:$page->seo_description;;
 @endphp
 
 @section('title', $title)
@@ -12,7 +12,7 @@
     <section class="equipment__panel">
         <div class="container">
             <div class="equipment__titel_panel">
-                <h1 class="titel_panel title">Медицинское оборудование на продажу</h1>
+                <h1 class="titel_panel title">{{ $page->title }}</h1>
             </div>
         </div>
     </section>
@@ -23,7 +23,11 @@
         </div>
     </section>
 
-    <x-category-selector></x-category-selector>
+    <section class="text_styles breadcrumbs_section">
+        <div class="container">
+            {!! $page->description !!}
+        </div>
+    </section>
 
-    <x-equipment-sale-rnt></x-equipment-sale-rnt>
 @endsection
+

@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Closure;
 use App\Models\Option;
+use App\Models\Menu\Menu;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;

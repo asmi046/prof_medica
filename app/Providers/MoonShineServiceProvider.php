@@ -11,6 +11,7 @@ use MoonShine\Menu\MenuItem;
 use MoonShine\Menu\MenuGroup;
 use MoonShine\Menu\MenuElement;
 use App\MoonShine\Resources\MenuResource;
+use App\MoonShine\Resources\PageResource;
 use App\MoonShine\Resources\OptionResource;
 use App\MoonShine\Resources\ProductResource;
 use App\MoonShine\Resources\CategoryResource;
@@ -76,9 +77,14 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             )->icon('heroicons.clock'),
 
             MenuItem::make(
+                static fn() => __('Страницы'),
+                new PageResource()
+            )->icon('heroicons.outline.clipboard-document') ,
+
+            MenuItem::make(
                 static fn() => __('Опции'),
                 new OptionResource()
-            )->icon('heroicons.adjustments-horizontal') ,
+            )->icon('heroicons.adjustments-horizontal'),
 
 
             // MenuItem::make('Documentation', 'https://moonshine-laravel.com/docs')

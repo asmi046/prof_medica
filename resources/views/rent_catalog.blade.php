@@ -1,10 +1,5 @@
 @extends('layouts.all')
 
-@php
-    $title = 'Медицинское оборудование на продажу';
-    $description = '';
-@endphp
-
 @section('title', $title)
 @section('description', $description)
 
@@ -12,7 +7,7 @@
     <section class="equipment__panel">
         <div class="container">
             <div class="equipment__titel_panel">
-                <h1 class="titel_panel title">Медицинское оборудование на продажу</h1>
+                <h1 class="titel_panel title">Медицинское оборудование в аренду</h1>
             </div>
         </div>
     </section>
@@ -26,4 +21,5 @@
     <x-category-selector></x-category-selector>
 
     <x-equipment-sale-rnt></x-equipment-sale-rnt>
+
 @endsection

@@ -1,0 +1,18 @@
+.category_selection {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        .cat_point {
+            padding: 10px 30px;
+            border-radius: $border_radius;
+            border: 1px solid $main_color;
+            margin-right: 10px;
+
+            &:hover,
+            &.action {
+                color:white;
+                background-color: $main_color;
+            }
+        }
+    }
+}
