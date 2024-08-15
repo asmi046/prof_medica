@@ -32,4 +32,11 @@ class CategoryController extends Controller
     public function category($cat) {
         return view('category');
     }
+
+    public function bay_product($slug) {
+        $product = Product::where('slug', $slug)->first();
+        if($product == null) abort('404');
+
+        return view('bay_product_page', ['product' => $product]);
+    }
 }

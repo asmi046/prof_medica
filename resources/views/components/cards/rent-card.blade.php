@@ -22,6 +22,6 @@
                 <div class="item__rent_price">{{ get_rent_price($item->base_price, $item->sales, 30) }} руб</div>
             </div>
         </div>
-        <a href="#" class="button">Взять в аренду</a>
+        <a href="{{ route('rent_product', $item->slug)}}" class="button">Взять в аренду</a>
     </div>
 </div>

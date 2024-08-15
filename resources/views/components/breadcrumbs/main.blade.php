@@ -11,11 +11,11 @@
 
 
 
-            @if (Request::route()->named('search-tovar'))
+            @if (Request::route()->named('rent_product'))
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a title="{{$article}}" itemprop="item" href="{{route('search', ['search'=> $article])}}">
-                        <span itemprop="name">{{ $article }}</span>
+                    <a title="Аренда оборудования" itemprop="item" href="{{route('rent_catalog')}}">
+                        <span itemprop="name">Аренда оборудования</span>
                         <meta itemprop="position" content="1">
                     </a>
                 </span>
@@ -23,8 +23,27 @@
                 <span class="sep"> / </span>
 
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
-                    <span title="{{ $brand }}" itemprop="item">
-                        <span itemprop="name">{{ $brand }}</span>
+                    <span title="{{ $product }}" itemprop="item">
+                        <span itemprop="name">{{ $product }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @endif
+
+            @if (Request::route()->named('bay_product'))
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="Продажа оборудования" itemprop="item" href="{{route('catalog_for_bay')}}">
+                        <span itemprop="name">Продажа оборудования</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $product }}" itemprop="item">
+                        <span itemprop="name">{{ $product }}</span>
                         <meta itemprop="position" content="2">
                     </span>
                 </span>

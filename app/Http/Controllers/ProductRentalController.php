@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Option;
 use Illuminate\Http\Request;
+use App\Models\ProductRental;
 
 class ProductRentalController extends Controller
 {
-    public function rental_catalog() {
+    public function rent_catalog() {
 
         $products = ProductRental::paginate(12);
 
@@ -27,7 +29,10 @@ class ProductRentalController extends Controller
         ]);
     }
 
-    public function rental_product() {
+    public function rent_product($slug) {
+        $product = ProductRental::where('slug', $slug)->first();
+        if($product == null) abort('404');
 
+        return view('rent_product_page', ['product' => $product]);
     }
 }

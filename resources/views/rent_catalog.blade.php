@@ -18,8 +18,16 @@
         </div>
     </section>
 
-    <x-category-selector></x-category-selector>
+    <section class="equipment_rent section">
+        <div class="container">
+            <div class="card__wrapper">
+                @foreach ($products as $item)
+                    <x-cards.rent-card :item="$item"></x-cards.rent-card>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
-    <x-equipment-sale-rnt></x-equipment-sale-rnt>
+    <x-pagination :tovars="$products"></x-pagination>
 
 @endsection

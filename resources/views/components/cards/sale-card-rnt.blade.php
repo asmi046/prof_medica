@@ -11,6 +11,6 @@
 
         <div class="item__rent_price"><span class="price-card">{{ $item->price }}</span> руб.</div>
 
-        <button class="button">Подробнее</button>
+        <a href="{{ route('bay_product', $item->slug ) }}" class="button">Подробнее</a>
     </div>
 </div>
