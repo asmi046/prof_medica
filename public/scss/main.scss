@@ -153,6 +153,18 @@ section{
             color:$hover_color;
         }
     }
+
+
+}
+
+swiper-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $main_color;
 }
 
 /*Мобильная верстка*/

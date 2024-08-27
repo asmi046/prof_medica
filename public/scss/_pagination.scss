@@ -18,10 +18,9 @@
 	display: flex;
 	padding: 5px 5px;
 	min-width: 30px;
-	color: #C6C6C6;
+	color: black;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid #C6C6C6;
 	margin-right: 10px;
 	transition: all 0.3s ease 0s;
 
@@ -30,8 +29,7 @@
 	}
 
 	&.current {
-		color: #fff;
-		background-color: $main_color;
+		color: $main_color;
 		border: 1px solid $main_color;
 	}
 
@@ -41,7 +39,16 @@
 			background-color: $main_color;
 			border: 1px solid $main_color;
 		}
+
+
 	}
+
+
+}
+
+.pagination__next:hover,
+.pagination__back:hover {
+    color:$main_color
 }
 
 .pagination__block-dot {

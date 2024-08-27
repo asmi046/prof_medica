@@ -44,18 +44,7 @@
                     <div class="card-item__description_text">
                         {!! $product->description !!}
                     </div>
-                    <rent-panel></rent-panel>
-                    <form action="#">
-                        <h3>Рассчитать стоимость аренды</h3>
-                        <p>Сутки: {{ $product->base_price }} руб.</p>
-                        <p>Залог: {{ $product->zalog }} руб.</p>
-                        <label for="rentDay">Дней аренды:</label>
-                        <input type="number" id="rentDay" value="10">
-                        <p><strong>Сумма 2000 р.</strong></p>
-                        <label for="phoneNum">Телефон:</label>
-                        <input type="tel" id="phoneNum" placeholder="+ 7 (000) 000-00-00">
-                        <input type="submit" class="button" value="Взять в аренду">
-                    </form>
+                    <rent-panel product="{{ $product->title }}" :zalog="{{ $product->zalog }}" :base="{{$product->base_price}}" :sales="{{ json_encode($product->sales) }}" ></rent-panel>
                 </div>
             </div>
         </div>

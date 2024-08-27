@@ -30,6 +30,9 @@
         </div>
     </section>
 
-    <x-pagination :tovars="$products"></x-pagination>
-
+    <section class="pagination_section">
+        <div class="container">
+            <x-pagination :tovars="$products"></x-pagination>
+        </div>
+    </section>
 @endsection

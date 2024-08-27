@@ -12,5 +12,49 @@
             object-fit: cover;
             object-position: center;
         }
+
+        .rent_start_param {
+            background-color: $advantages_bg_color;
+            border-radius: 20px;
+            padding: 10px 30px;
+            margin-bottom: 20px;
+        }
+
+        .final_price {
+            margin: 10px 0 20px 0;
+        }
+
+        &__description {
+
+
+            margin-left: 40px;
+            h3 {
+                margin-top: 0px;
+            }
+
+            .card-item__description_text {
+                border-top: 1px solid $main_color;
+                border-bottom: 1px solid $main_color;
+                padding: 20px  0;
+                margin-bottom: 20px;
+            }
+
+            & form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .control_wrapper {
+                display: flex;
+            }
+
+            .loader_icon {
+                fill: $main_color;
+                stroke: none;
+                width: 40px;
+                height: 40px;
+                margin-left: 20px;
+            }
+        }
     }
 }
