@@ -17,7 +17,9 @@ use MoonShine\Fields\Textarea;
 use MoonShine\Decorations\Block;
 use MoonShine\Resources\ModelResource;
 use Illuminate\Database\Eloquent\Model;
+use MoonShine\Fields\Relationships\HasMany;
 use MoonShine\Components\MoonShineComponent;
+use App\MoonShine\Resources\ProductGaleryResource;
 
 /**
  * @extends ModelResource<Product>
@@ -48,6 +50,8 @@ class ProductResource extends ModelResource
                 Number::make('Количество просмотров', "viev_count")->default(2)->hideOnIndex(),
                 Switcher::make('Хит продаж', 'hit'),
                 Switcher::make('Новинка', 'new'),
+
+                HasMany::make('Галерея', 'galery', resource: new ProductGaleryResource())->creatable(),
 
                 Text::make('Seo заголовок', 'seo_title')->hideOnIndex(),
                 Text::make('Seo описание', 'seo_description')->hideOnIndex(),

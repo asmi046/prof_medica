@@ -16,6 +16,7 @@ use App\MoonShine\Resources\OptionResource;
 use App\MoonShine\Resources\ProductResource;
 use App\MoonShine\Resources\CategoryResource;
 use MoonShine\Resources\MoonShineUserResource;
+use App\MoonShine\Resources\ProductGaleryResource;
 use App\MoonShine\Resources\ProductRentalResource;
 use MoonShine\Resources\MoonShineUserRoleResource;
 use MoonShine\Contracts\Resources\ResourceContract;
@@ -28,7 +29,9 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
      */
     protected function resources(): array
     {
-        return [];
+        return [
+            new ProductGaleryResource()
+        ];
     }
 
     /**

@@ -18,6 +18,7 @@ class ProductRental extends Model
         'short_description',
         'base_price',
         'sales',
+        'galery',
         'zalog',
         'viev_count',
         'seo_title',
@@ -25,6 +26,7 @@ class ProductRental extends Model
     ];
 
     protected $casts = [
-        'sales' => 'array'
+        'sales' => 'array',
+        'galery' => 'array'
     ];
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Option;
 use Illuminate\Http\Request;
 use App\Models\ProductRental;
+use Barryvdh\Debugbar\Facades\Debugbar;
 
 class ProductRentalController extends Controller
 {
@@ -32,7 +33,7 @@ class ProductRentalController extends Controller
     public function rent_product($slug) {
         $product = ProductRental::where('slug', $slug)->first();
         if($product == null) abort('404');
-
+        Debugbar::info($product->galery);
         return view('rent_product_page', ['product' => $product]);
     }
 }

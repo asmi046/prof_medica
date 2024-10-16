@@ -31,11 +31,16 @@
 
                         <swiper-container pagination="true">
                             <swiper-slide>
-                                <img src="{{ asset('img/card-items/card-item1.png') }}" alt="Карточка товара">
+                                <img src="{{ Storage::url($product->img) }}" alt="{{ $product->title }}">
                             </swiper-slide>
-                            <swiper-slide>
-                                <img src="{{ asset('img/card-items/card-item1.png') }}" alt="Карточка товара">
-                            </swiper-slide>
+
+                            @foreach ($product->galery as $item)
+                                <swiper-slide>
+                                    <img src="{{ Storage::url($item['img']) }}" alt="{{ $item['title'] }}">
+                                </swiper-slide>
+                            @endforeach
+
+
                         </swiper-container>
 
                 </div>

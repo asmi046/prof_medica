@@ -27,6 +27,7 @@ return new class extends Migration
             $table->double('zalog', 10, 2)->default(0);
 
             $table->json('sales')->nullable();
+            $table->json('galery')->nullable();
 
             $table->integer('viev_count')->nullable()->default(0);
 

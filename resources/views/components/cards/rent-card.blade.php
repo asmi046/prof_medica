@@ -1,4 +1,4 @@
-<div class="card__item">
+<a href="{{ route('rent_product', $item->slug)}}" class="card__item">
     <div class="card__item-img">
         <img src="{{ Storage::url($item->img) }}"
             alt="{{ $item->title }}">
@@ -22,6 +22,6 @@
                 <div class="item__rent_price">{{ get_rent_price($item->base_price, $item->sales, 30) }} руб</div>
             </div>
         </div>
-        <a href="{{ route('rent_product', $item->slug)}}" class="button">Взять в аренду</a>
+        <button class="button">Взять в аренду</button>
     </div>
-</div>
+</a>
