@@ -140,3 +140,9 @@
         display: flex;
     }
 }
+
+@media (max-width:480px) {
+    .side_menue_wrapper .side_menue {
+        width: 80%;
+    }
+}
