@@ -59,16 +59,34 @@ let sendProces = ref(false);
 
 const calcFinalPrice = () =>  {
     finalSumm.value = 0;
-    for (let i = 0; i<rentDay.value; i++) {
+    // for (let i = 0; i<rentDay.value; i++) {
+    //     let index = (i<props.sales.length)?i:props.sales.length
+
+    //     finalSumm.value += props.base - ((props.base / 100) * props.sales[index].sale)
+    // }
+
+    let monthPrice = 0
+    for (let i = 1; i<=rentDay.value; i++) {
         let index = (i<props.sales.length)?i:props.sales.length
 
-        finalSumm.value += props.base - ((props.base / 100) * props.sales[index].sale)
+
+        if (i <= 30)
+        {
+            finalSumm.value += props.base - ((props.base / 100) * props.sales[index-1].sale)
+            monthPrice = finalSumm.value / i;
+        } else {
+            finalSumm.value += monthPrice
+        }
+
     }
 
-    console.log(props.sales)
 }
 
 const sendRentProduct = () => {
+    if (phone.value == "") {
+        alert("Поле телефон должно быть заполнено")
+        return
+    }
     sendProces.value = true
     axios.post('/send_rent', {
             'product': props.product,

@@ -51,6 +51,10 @@ let phone = ref('')
 let sendProces = ref(false);
 
 const sendBayProduct = () => {
+    if (phone.value == "") {
+        alert("Поле телефон должно быть заполнено")
+        return
+    }
     sendProces.value = true
     axios.post('/send_bay', {
             'product': props.product,
