@@ -34,7 +34,7 @@
                                 <img src="{{ $product->img?Storage::url($product->img):asset('img/no_photo.png') }}" alt="{{ $product->title }}">
                             </swiper-slide>
 
-                            @if ($product)
+                            @if ($product->galery)
                                 @foreach ($product->galery as $item)
                                     <swiper-slide>
                                         <img src="{{ Storage::url($item['img']) }}" alt="{{ $item['title'] }}">
