@@ -3,7 +3,7 @@
     <div class="container">
         <div class="about__wrapper">
             <h2 class="title about__title">{{ $heder }}</h2>
-            <div class="about__text">
+            <div class="about__text text_styles">
                 {!! $text !!}
             </div>
         </div>

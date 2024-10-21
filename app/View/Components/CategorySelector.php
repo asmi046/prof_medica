@@ -10,12 +10,14 @@ use Illuminate\Contracts\View\View;
 class CategorySelector extends Component
 {
     public $all_categories;
+    public $curent = null;
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($curent)
     {
         $this->all_categories = Category::all();
+        $this->curent = $curent;
     }
 
     /**

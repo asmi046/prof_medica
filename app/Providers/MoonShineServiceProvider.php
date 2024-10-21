@@ -9,7 +9,9 @@ use MoonShine\MoonShine;
 use MoonShine\Pages\Page;
 use MoonShine\Menu\MenuItem;
 use MoonShine\Menu\MenuGroup;
+use MoonShine\Menu\MenuDivider;
 use MoonShine\Menu\MenuElement;
+use Illuminate\Support\Facades\Artisan;
 use App\MoonShine\Resources\MenuResource;
 use App\MoonShine\Resources\PageResource;
 use App\MoonShine\Resources\OptionResource;
@@ -88,6 +90,13 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 static fn() => __('Опции'),
                 new OptionResource()
             )->icon('heroicons.adjustments-horizontal'),
+
+            MenuDivider::make(),
+
+            MenuItem::make(
+                static fn() => __('Сброс кеша'),
+                fn() => route('cache_clear'),
+            )->icon('heroicons.arrow-path-rounded-square'),
 
 
             // MenuItem::make('Documentation', 'https://moonshine-laravel.com/docs')

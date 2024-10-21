@@ -27,20 +27,51 @@ class OptionResource extends ModelResource
     protected string $title = 'Опции сайта';
     protected string $column = 'name';
 
+
+    /**
+     * @return list<Field>
+     */
+    public function indexFields(): array
+    {
+        return [
+            ID::make()->sortable(),
+            Text::make('Идентификатор', 'name')->readonly(),
+            Text::make('Название', 'title'),
+            Textarea::make('Значение', 'value')->changeFill(
+                function($data, Field $field) {
+                    return mb_strimwidth(strip_tags($data->value), 0, 80, "...");
+                }
+            )
+        ];
+    }
+
     /**
      * @return list<MoonShineComponent|Field>
      */
-    public function fields(): array
+    public function formFields(): array
     {
         return [
-            Block::make([
-                ID::make()->sortable(),
-                Text::make('Идентификатор', 'name')->readonly(),
-                Text::make('Название', 'title'),
-                Textarea::make('Значение', 'value'),
-            ]),
+            ID::make()->sortable(),
+            Text::make('Идентификатор', 'name')->readonly(),
+            Text::make('Название', 'title'),
+            Textarea::make('Значение', 'value'),
         ];
     }
+
+    /**
+     * @return list<Field>
+     */
+    public function detailFields(): array
+    {
+        return [
+            ID::make()->sortable(),
+            Text::make('Идентификатор', 'name')->readonly(),
+            Text::make('Название', 'title'),
+            Textarea::make('Значение', 'value'),
+        ];
+    }
+
+
 
     /**
      * @param Option $item

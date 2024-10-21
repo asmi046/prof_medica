@@ -39,6 +39,7 @@ class ProductSeeder extends Seeder
             "0020" => "Ролятор с сиденьем и корзиной «Шагаем вместе» - 2",
         ];
 
+        Storage::disk('public')->put("product/no_photo.png", file_get_contents(public_path('img//no_photo.png')), 'public');
         Storage::disk('public')->put("product/1.jpg", file_get_contents(public_path('base//product//img//1.jpg')), 'public');
         Storage::disk('public')->put("product/2.jpg", file_get_contents(public_path('base//product//img//2.jpg')), 'public');
         Storage::disk('public')->put("product/3.jpg", file_get_contents(public_path('base//product//img//3.jpg')), 'public');
@@ -47,11 +48,11 @@ class ProductSeeder extends Seeder
         Storage::disk('public')->put("product/6.jpg", file_get_contents(public_path('base//product//img//6.jpg')), 'public');
 
         foreach ($data as $key => $item) {
-            DB::table("products")->insert([
+            $id = DB::table("products")->insertGetId([
                 "sku" => $key,
                 "title" => $item,
                 "slug" => Str::slug($item),
-                "img" => "product/".rand(1,6).".jpg",
+                "img" => "product/no_photo.png",
                 "price" => rand(1000, 9000),
                 "description"=> "Реабилитационный тренажёр «Восстановитель» предназначен для восстановления двигательных функций после травм и операций. Он помогает укрепить мышцы, улучшить координацию движений и повысить общую физическую выносливость. Тренажёр может использоваться как в медицинских учреждениях, так и дома. Регулярные занятия на тренажёре способствуют более быстрому восстановлению после травм или операций, а также могут быть полезны для профилактики заболеваний опорно-двигательного аппарата.",
                 "short_description" => "Реабилитационный тренажёр «Восстановитель» предназначен для восстановления двигательных функций после травм и операций. Он помогает укрепить мышцы, улучшить координацию движений и повысить общую физическую выносливость.",
@@ -61,6 +62,16 @@ class ProductSeeder extends Seeder
                 "seo_title" => $item,
                 "seo_description"=>$item,
             ]);
+
+            for ($i = 0; $i < rand(1,3); $i++) {
+                DB::table("category_product")->insertGetId(
+                    [
+                        'category_id' => rand(1, 4),
+                        'product_id' => $id,
+                    ]
+                );
+            }
+
         }
     }
 }

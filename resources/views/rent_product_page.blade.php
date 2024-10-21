@@ -42,7 +42,6 @@
 
 
                         </swiper-container>
-
                 </div>
                 <div id="rent_panel" class="card-item card-item__description">
                     <h3>Описание оборудования</h3>

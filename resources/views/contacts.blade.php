@@ -28,19 +28,19 @@
             <div class="contacts_blk">
                 @if (isset($contacts_data["phone"]))
                     <p class="phone">
-                        <a href="tel:+7{{phone_format($contacts_data["phone"])}}" class="menu__call">{{$contacts_data["phone"]}}</a>
+                        <a href="tel:+7{{phone_format($contacts_data["phone"])}}" class="page__call">{{$contacts_data["phone"]}}</a>
                     </p>
                 @endif
 
                 @if (isset($contacts_data["phone2"]))
                     <p class="phone">
-                        <a href="tel:+7{{phone_format($contacts_data["phone2"])}}" class="menu__call">{{$contacts_data["phone2"]}}</a>
+                        <a href="tel:+7{{phone_format($contacts_data["phone2"])}}" class="page__call">{{$contacts_data["phone2"]}}</a>
                     </p>
                 @endif
 
                 @if (isset($contacts_data["email"]))
                     <p class="email">
-                        <a href="mailto:{{$contacts_data["email"]}}" class="menu__call">{{ $contacts_data["email"] }}</a>
+                        <a href="mailto:{{$contacts_data["email"]}}" class="page__call">{{ $contacts_data["email"] }}</a>
                     </p>
                 @endif
 

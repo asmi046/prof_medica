@@ -1,8 +1,8 @@
 @extends('layouts.all')
 
 @php
-    $title = "Оборудование для продажи";
-    $description = "Оборудование для продажи";
+    $title = (empty($category->seo_title))?$category->title:$category->seo_title;
+    $description = (empty($category->seo_description))?$category->title:$category->seo_description;;
 @endphp
 
 @section('title', $title)
@@ -23,12 +23,12 @@
         </div>
     </section>
 
-    <x-category-selector :curent="null"></x-category-selector>
+    <x-category-selector :curent="$category"></x-category-selector>
 
     <section class="equipment_rent section">
         <div class="container">
             <div class="card__wrapper">
-                @foreach ($products as $item)
+                @foreach ($category->category_tovars as $item)
                     <x-cards.sale-card-rnt :item="$item"></x-cards.sale-card-rnt>
                 @endforeach
             </div>
@@ -37,7 +37,7 @@
 
     <section class="pagination_section">
         <div class="container">
-            <x-pagination :tovars="$products"></x-pagination>
+            <x-pagination :tovars="$category->category_tovars()->paginate(15)"></x-pagination>
         </div>
     </section>
 @endsection

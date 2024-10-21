@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Option;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -30,7 +31,11 @@ class CategoryController extends Controller
     }
 
     public function category($cat) {
-        return view('category');
+        $cat = Category::where('slug', $cat)->first();
+
+        if (!$cat) abort(404);
+
+        return view('category', ['category' => $cat]);
     }
 
     public function bay_product($slug) {

@@ -1,8 +1,8 @@
 @extends('layouts.all')
 
 @php
-    $title = 'Главная';
-    $description = '';
+    $title = $title;
+    $description = $description;
 @endphp
 
 @section('title', $title)

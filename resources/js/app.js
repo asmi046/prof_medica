@@ -1,5 +1,8 @@
 import './bootstrap';
 
+import SideMenu from './menues.js';
+let side_menue = new SideMenu('#main_side_menue', '.show_menue_button')
+
 import { register } from 'swiper/element/bundle';
 register();
 

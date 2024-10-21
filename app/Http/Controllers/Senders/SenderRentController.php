@@ -27,6 +27,6 @@ class SenderRentController extends Controller
     }
 
     public function show_thencs() {
-        return view('mail.consultation.thencs');
+        return view('mail.senders.thencs');
     }
 }

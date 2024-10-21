@@ -16,10 +16,16 @@ class Header extends Component
      */
 
     public $phone;
+    public $email;
     public $main_menu;
 
     public function __construct()
     {
+        $this->email = Cache::rememberForever('email', function () {
+            $h = Option::where('name', 'email')->first();
+            return ($h)?$h['value']:"info@mail.com";
+        });
+
         $this->phone = Cache::rememberForever('phone', function () {
             $h = Option::where('name', 'phone')->first();
             return ($h)?$h['value']:"+7 900 000 00 00";

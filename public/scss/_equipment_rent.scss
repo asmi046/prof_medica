@@ -86,6 +86,10 @@
 
 /*Для карточки товара в аренду*/
 .equipment{
+    &__panel {
+        margin-bottom: 0;
+    }
+
     &__titel_panel {
         padding:30px 40px;
         border-radius: $border_radius;

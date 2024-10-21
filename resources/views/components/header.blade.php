@@ -1,4 +1,5 @@
 <header class="header">
+    <x-menues.side-menu :menu="$main_menu" :phone="$phone" :email="$email"></x-menues.side-menu>
     <div class="container container__header">
         <div class="header__wrapper">
             <a href="{{ route('home') }}"><img class="header__logo logo" src="{{ asset('/img/logo.svg') }}" alt="Логотип Профмедика"></a>
@@ -8,4 +9,5 @@
                 <a href="tel:+7{{ phone_format($phone) }}" class="menu__call">{{ $phone }}</a>
             </nav>
         </div>
+    </div>
 </header>

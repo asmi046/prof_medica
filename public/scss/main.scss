@@ -16,6 +16,8 @@
 @import "footer";
 @import "card";
 @import "category_selector";
+@import "menues_mobile";
+@import "burger-icon";
 
 html {
     -webkit-font-smoothing: antialiased;
@@ -48,6 +50,7 @@ section{
 // Стили хлебных крошек
 .breadcrumbs_section{
     padding: 0;
+    margin-bottom: 0;
 }
 
 // Боковое беню
@@ -153,9 +156,8 @@ section{
             color:$hover_color;
         }
     }
-
-
 }
+
 
 swiper-container {
     border-radius: 20px;
@@ -165,6 +167,16 @@ swiper-container {
 
 .swiper-pagination-bullet-active {
     background-color: $main_color;
+}
+
+.section__thencs {
+    height: 70vh;
+    text-align: center;
+
+    .hard {
+        font-size: 72px;
+        margin: 40px;
+    }
 }
 
 /*Мобильная верстка*/

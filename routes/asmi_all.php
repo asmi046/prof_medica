@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\RentController;
 use App\Http\Controllers\SaleController;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactsController;
@@ -26,3 +27,8 @@ Route::get('/rent_catalog/{slug}', [ProductRentalController::class, "rent_produc
 Route::get('/rent', [RentController::class, "index"])->name('rent');
 Route::get('/sale', [SaleController::class, "index"])->name('sale');
 Route::get('/card', [CardController::class, "index"])->name('card');
+
+Route::get('/cache_clear', function() {
+    Artisan::call('optimize:clear');
+    return Redirect::back()->with('msg', 'Кеш сброшен');
+})->name('cache_clear');
