@@ -115,7 +115,7 @@
 
     .card__item {
         &-img {
-        height: auto;
+        height: 150px;
     }
 
         &-info {
@@ -131,11 +131,15 @@
 
 @media (max-width: 768px){
     .card__wrapper{
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(2, 50%);
         column-gap: 0;
         .card__item-info{
             padding: 10px;
         }
+    }
+
+    .card__item_equipment{
+        word-break:break-all
     }
 }
 
