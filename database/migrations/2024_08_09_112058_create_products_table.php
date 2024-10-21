@@ -30,7 +30,8 @@ return new class extends Migration
             $table->boolean("hit")->nullable();
             $table->boolean("new")->nullable();
 
-            $table->json('galery')->default(json_encode([]));
+            // $table->json('galery')->default(json_encode([]));
+            $table->json('galery')->nullable();
 
             $table->string('seo_title')->nullable();
             $table->text('seo_description')->nullable();
