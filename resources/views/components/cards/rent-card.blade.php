@@ -1,6 +1,6 @@
 <a href="{{ route('rent_product', $item->slug)}}" class="card__item">
     <div class="card__item-img">
-        <img src="{{ Storage::url($item->img) }}"
+        <img src="{{ $item->img?Storage::url($item->img):asset('img/no_photo.png')  }}"
             alt="{{ $item->title }}">
     </div>
 

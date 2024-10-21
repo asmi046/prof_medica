@@ -9,6 +9,7 @@ button,
     background-color: $main_btn_color;
     color:white;
     border-radius: $border_rad;
+    cursor:pointer;
 
     &__primary{
         background-color: $primary_btn_color;

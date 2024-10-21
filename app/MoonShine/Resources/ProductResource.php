@@ -7,11 +7,13 @@ namespace App\MoonShine\Resources;
 use App\Models\Product;
 use MoonShine\Fields\ID;
 
+use MoonShine\Fields\Json;
 use MoonShine\Fields\Slug;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\Field;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
+use MoonShine\Fields\Position;
 use MoonShine\Fields\Switcher;
 use MoonShine\Fields\Textarea;
 use MoonShine\Decorations\Block;
@@ -44,14 +46,21 @@ class ProductResource extends ModelResource
                 Text::make('Цена', 'price'),
                 Text::make('Цена со скидкой', 'old_price'),
                 Slug::make('Окончание ссылки', "slug")->from('title')->unique()->hideOnIndex(),
-                Image::make('Изображение', "img")->disk('public')->dir('product'),
+                Image::make('Изображение', "img")->disk('public')->dir('product')->removable(),
                 Textarea::make('Описание', "description")->hideOnIndex(),
                 Textarea::make('Короткое описание', "short_description")->hideOnIndex(),
                 Number::make('Количество просмотров', "viev_count")->default(2)->hideOnIndex(),
                 Switcher::make('Хит продаж', 'hit'),
                 Switcher::make('Новинка', 'new'),
 
-                HasMany::make('Галерея', 'galery', resource: new ProductGaleryResource())->creatable(),
+                Json::make('Галерея', 'galery')
+                ->fields([
+                    Position::make(),
+                    Image::make('Изображение', 'img'),
+                    Text::make('Заголовок', 'title'),
+                ])
+                ->hideOnIndex()
+                ->removable(),
 
                 Text::make('Seo заголовок', 'seo_title')->hideOnIndex(),
                 Text::make('Seo описание', 'seo_description')->hideOnIndex(),

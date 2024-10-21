@@ -13,6 +13,7 @@ use MoonShine\Fields\Field;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
 use App\Models\ProductRental;
+use MoonShine\Fields\Position;
 use MoonShine\Fields\Textarea;
 use MoonShine\Decorations\Block;
 use MoonShine\Resources\ModelResource;
@@ -44,17 +45,28 @@ class ProductRentalResource extends ModelResource
                 Text::make('Залог', 'zalog'),
 
                 Slug::make('Окончание ссылки', "slug")->from('title')->unique()->hideOnIndex(),
-                Image::make('Изображение', "img")->disk('public')->dir('product_rental'),
+                Image::make('Изображение', "img")->disk('public')->dir('product_rental')->removable(),
                 Textarea::make('Описание', "description")->hideOnIndex(),
                 Textarea::make('Короткое описание', "short_description")->hideOnIndex(),
                 Number::make('Количество просмотров', "viev_count")->default(2)->hideOnIndex(),
 
                 Json::make('Скидки', 'sales')
                 ->fields([
+                    Position::make(),
                     Number::make('День', 'day'),
                     Number::make('Скидка', 'sale'),
                 ])
-                ->hideOnIndex(),
+                ->hideOnIndex()
+                ->removable(),
+
+                Json::make('Галерея', 'galery')
+                ->fields([
+                    Position::make(),
+                    Image::make('Изображение', 'img'),
+                    Text::make('Заголовок', 'title'),
+                ])
+                ->hideOnIndex()
+                ->removable(),
 
                 Text::make('Seo заголовок', 'seo_title')->hideOnIndex(),
                 Text::make('Seo описание', 'seo_description')->hideOnIndex(),

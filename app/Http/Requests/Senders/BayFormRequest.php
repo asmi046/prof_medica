@@ -4,7 +4,7 @@ namespace App\Http\Requests\Senders;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RentFormRequest extends FormRequest
+class BayFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,8 @@ class RentFormRequest extends FormRequest
         return [
             'product.required' => 'Поле "Продукт" должно быть заполнено',
             'phone.required' => 'Поле "Телефон" должно быть заполнено',
-            'summ.required' => 'Поле "Сумма" должно быть заполнено',
-            'deys.required' => 'Поле "Количество дней" должно быть заполнено',
-            'deys.integer' => 'Поле "Количество дней" должно быть целым числом',
+            'count.required' => 'Поле "Необходимое количество" должно быть заполнено',
+            'count.integer' => 'Поле "Необходимое количество" должно быть целым числом',
         ];
     }
 
@@ -40,8 +39,7 @@ class RentFormRequest extends FormRequest
         return [
             "product" => ['required','string'],
             "phone" => ['required','string'],
-            "deys" => ['required','integer'],
-            "summ" => ['required'],
+            "count" => ['required', 'integer'],
         ];
     }
 }

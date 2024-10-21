@@ -30,12 +30,18 @@
                 <div class="card-item card-item__img">
 
                         <swiper-container pagination="true">
+
                             <swiper-slide>
-                                <img src="{{ asset('img/card-items/card-item1.png') }}" alt="Карточка товара">
+                                <img src="{{ $product->img?Storage::url($product->img):asset('img/no_photo.png') }}" alt="{{ $product->title }}">
                             </swiper-slide>
-                            <swiper-slide>
-                                <img src="{{ asset('img/card-items/card-item1.png') }}" alt="Карточка товара">
-                            </swiper-slide>
+
+
+                            @foreach ($product->galery as $item)
+                                <swiper-slide>
+                                    <img src="{{ Storage::url($item['img']) }}" alt="{{ $item['title'] }}">
+                                </swiper-slide>
+                            @endforeach
+
                         </swiper-container>
 
                 </div>
@@ -44,18 +50,10 @@
                     <div class="card-item__description_text">
                         {!! $product->description !!}
                     </div>
-                    <bay-panel></bay-panel>
-                    <form action="#">
-                        <h3>Рассчитать стоимость аренды</h3>
-                        <p>Сутки: {{ $product->base_price }} руб.</p>
-                        <p>Залог: {{ $product->zalog }} руб.</p>
-                        <label for="rentDay">Дней аренды:</label>
-                        <input type="number" id="rentDay" value="10">
-                        <p><strong>Сумма 2000 р.</strong></p>
-                        <label for="phoneNum">Телефон:</label>
-                        <input type="tel" id="phoneNum" placeholder="+ 7 (000) 000-00-00">
-                        <input type="submit" class="button" value="Взять в аренду">
-                    </form>
+                    <bay-panel
+                        product="{{ $product->title }}"
+                        :price="{{$product->price}}"
+                    ></bay-panel>
                 </div>
             </div>
         </div>

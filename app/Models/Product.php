@@ -21,6 +21,8 @@ class Product extends Model
         "price",
         "old_price",
 
+        'galery',
+
         "viev_count",
 
         "hit",
@@ -28,6 +30,10 @@ class Product extends Model
 
         "seo_title",
         "seo_description",
+    ];
+
+    protected $casts = [
+        'galery' => 'array'
     ];
 
     public function setSlugAttribute($value)

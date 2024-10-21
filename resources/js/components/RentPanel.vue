@@ -3,8 +3,8 @@
         <h3>Рассчитать стоимость аренды:</h3>
 
         <div class="rent_start_param" >
-            <p>Сутки: {{ $props.base }} руб.</p>
-            <p>Залог: {{ $props.zalog }} руб.</p>
+            <p>Сутки: <strong>{{ $props.base }}</strong> руб.</p>
+            <p>Залог: <strong>{{ $props.zalog }}</strong> руб.</p>
         </div>
 
         <div class="field">
@@ -19,7 +19,7 @@
         <div class="field">
             <label class="label">Телефон для связи:</label>
             <div class="control">
-                <input v-model="phone" name="phoneNum" class="input" type="tel" placeholder="+ 7 (000) 000-00-00">
+                <input v-model="phone" ref="el" name="phoneNum" class="input" type="tel" placeholder="+ 7 (000) 000-00-00">
             </div>
         </div>
 
@@ -36,7 +36,7 @@
 
 <script setup>
 import { ref } from 'vue';
-
+import { useIMask } from 'vue-imask';
 
 const props = defineProps({
   product: String,
@@ -44,6 +44,11 @@ const props = defineProps({
   base: Number,
   sales: Array,
 })
+
+const { el, masked } = useIMask({
+        mask: '+{7} (000) 000-00-00',
+      }
+);
 
 let finalSumm = ref(0)
 let rentDay = ref(3)
@@ -67,10 +72,13 @@ const sendRentProduct = () => {
     sendProces.value = true
     axios.post('/send_rent', {
             'product': props.product,
+            'deys': rentDay.value,
+            'summ': finalSumm.value,
             'phone': phone.value
         })
         .then(() => {
             sendProces.value = false
+            document.location.href = "/thencs_consult"
         })
         .catch((error) => {
             console.log(error)

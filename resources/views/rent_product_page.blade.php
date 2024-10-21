@@ -31,7 +31,7 @@
 
                         <swiper-container pagination="true">
                             <swiper-slide>
-                                <img src="{{ Storage::url($product->img) }}" alt="{{ $product->title }}">
+                                <img src="{{ $product->img?Storage::url($product->img):asset('img/no_photo.png') }}" alt="{{ $product->title }}">
                             </swiper-slide>
 
                             @foreach ($product->galery as $item)
