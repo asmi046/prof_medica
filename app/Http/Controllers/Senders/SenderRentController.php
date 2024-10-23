@@ -19,7 +19,6 @@ class SenderRentController extends Controller
     public function send_rent(RentFormRequest $request, TelegramSendAction $tgsender) {
         $data = $request->validated();
 
-
         $tmp = $tgsender->handle("<b>Аренда оборудования</b>\n\rИмя: ".$data['product']."\n\rТелефон: ".$data['phone']."\n\rКоличество дней: ".$data['deys']."\n\rСумма: ".$data['summ']." р.");
 
         try {
@@ -34,7 +33,6 @@ class SenderRentController extends Controller
 
     public function send_bay(BayFormRequest $request, TelegramSendAction $tgsender) {
         $data = $request->validated();
-
 
         $tmp = $tgsender->handle("<b>Покупка оборудования</b>\n\rИмя: ".$data['product']."\n\rТелефон: ".$data['phone']."\n\rНеобходимое количество: ".$data['count']);
 

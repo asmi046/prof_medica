@@ -46,7 +46,7 @@ const props = defineProps({
 })
 
 const { el, masked } = useIMask({
-        mask: '+{7} (000) 000-00-00',
+        mask: '+{7}(000)000-00-00',
       }
 );
 
