@@ -41,9 +41,9 @@ class OptionResource extends ModelResource
     }
 
 
-    protected function modifyDeleteButton(ActionButton $button): ActionButton
+    public function getActiveActions(): array
     {
-        return null;
+        return ['create', 'view', 'update'];
     }
 
     /**
