@@ -28,6 +28,15 @@ class MenuResource extends ModelResource
     protected string $title = 'Меню';
     protected string $column = 'title';
 
+    public function import(): ?ImportHandler
+    {
+        return null;
+    }
+
+    public function export(): ?ExportHandler
+    {
+        return null;
+    }
 
     /**
      * @return list<MoonShineComponent|Field>

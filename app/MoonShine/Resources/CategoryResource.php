@@ -27,6 +27,16 @@ class CategoryResource extends ModelResource
 
     protected string $title = 'Категори';
 
+    public function import(): ?ImportHandler
+    {
+        return null;
+    }
+
+    public function export(): ?ExportHandler
+    {
+        return null;
+    }
+
     /**
      * @return list<MoonShineComponent|Field>
      */

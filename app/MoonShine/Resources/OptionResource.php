@@ -27,6 +27,15 @@ class OptionResource extends ModelResource
     protected string $title = 'Опции сайта';
     protected string $column = 'name';
 
+    public function import(): ?ImportHandler
+    {
+        return null;
+    }
+
+    public function export(): ?ExportHandler
+    {
+        return null;
+    }
 
     /**
      * @return list<Field>

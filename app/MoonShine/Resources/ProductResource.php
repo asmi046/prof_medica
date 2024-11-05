@@ -33,6 +33,16 @@ class ProductResource extends ModelResource
     protected string $title = 'Товары на продажу';
     protected string $column = 'title';
 
+    public function import(): ?ImportHandler
+    {
+        return null;
+    }
+
+    public function export(): ?ExportHandler
+    {
+        return null;
+    }
+
     /**
      * @return list<MoonShineComponent|Field>
      */
