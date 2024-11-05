@@ -62,7 +62,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             ]),
 
             MenuItem::make(
-                static fn() => __('Мню'),
+                static fn() => __('Меню'),
                 new MenuResource()
             )->icon('heroicons.bars-3') ,
 
