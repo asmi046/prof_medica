@@ -17,6 +17,7 @@ use MoonShine\Handlers\ExportHandler;
 use MoonShine\Handlers\ImportHandler;
 use MoonShine\Resources\ModelResource;
 use Illuminate\Database\Eloquent\Model;
+use MoonShine\ActionButtons\ActionButton;
 use MoonShine\Components\MoonShineComponent;
 
 /**
@@ -35,6 +36,12 @@ class OptionResource extends ModelResource
     }
 
     public function export(): ?ExportHandler
+    {
+        return null;
+    }
+
+
+    protected function modifyDeleteButton(ActionButton $button): ActionButton
     {
         return null;
     }
