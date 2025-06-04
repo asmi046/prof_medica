@@ -13,6 +13,7 @@ use MoonShine\Fields\Text;
 use MoonShine\Fields\Field;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
+use MoonShine\Fields\TinyMce;
 use MoonShine\Fields\Position;
 use MoonShine\Fields\Switcher;
 use MoonShine\Fields\Textarea;
@@ -59,8 +60,8 @@ class ProductResource extends ModelResource
                 Text::make('Цена со скидкой', 'old_price'),
                 Slug::make('Окончание ссылки', "slug")->from('title')->unique()->hideOnIndex(),
                 Image::make('Изображение', "img")->disk('public')->dir('product')->removable(),
-                Textarea::make('Описание', "description")->hideOnIndex(),
-                Textarea::make('Короткое описание', "short_description")->hideOnIndex(),
+                TinyMce::make('Описание', "description")->hideOnIndex(),
+                TinyMce::make('Короткое описание', "short_description")->hideOnIndex(),
                 Number::make('Количество просмотров', "viev_count")->default(2)->hideOnIndex(),
                 Switcher::make('Хит продаж', 'hit'),
                 Switcher::make('Новинка', 'new'),
@@ -90,6 +91,11 @@ class ProductResource extends ModelResource
      */
     public function rules(Model $item): array
     {
-        return [];
+        return [
+            'title' => ['required'],
+            'sku' => ['required'],
+            'price' => ['required'],
+            'img' =>($item->img === "")?['required']:[],
+        ];
     }
 }
