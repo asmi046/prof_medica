@@ -95,6 +95,7 @@ class ProductResource extends ModelResource
             'title' => ['required'],
             'sku' => ['required'],
             'price' => ['required'],
+            'old_price' => ['required'],
             'img' =>($item->img === "")?['required']:[],
         ];
     }
